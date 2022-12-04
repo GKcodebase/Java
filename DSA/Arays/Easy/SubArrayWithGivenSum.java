@@ -8,7 +8,7 @@ public class SubArrayWithGivenSum {
 
     /**
      * Sub array sum.
-     * Sub array of given sum with positive numbers, prints fist and last index of sub array.
+     * Sub array of given sum in positive number array, prints fist and last index of sub array.
      *
      * @param list the list
      * @param sum  the sum
