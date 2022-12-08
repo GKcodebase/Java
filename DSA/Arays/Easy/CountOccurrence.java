@@ -51,6 +51,7 @@ public class CountOccurrence {
      * @param args the input arguments
      */
     public static void main(String[] args) {
+        //Driver code to run method
         int[] arr = {1, 2, 2, 2, 2, 3, 4, 7, 8, 8};
         CountOccurrence occurrence = new CountOccurrence();
         int key = 2;
