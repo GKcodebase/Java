@@ -2,7 +2,7 @@ package DSA.LinkedList.Easy;
 
 /**
  * The Merge linked list.
- * Merging two sorted linkedlist
+ * Merging two sorted linked-list
  */
 public class MergeLinkedList {
 
