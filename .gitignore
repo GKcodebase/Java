@@ -1,2 +1,7 @@
-.idea
-.out
+# file: ~/.gitignore_global
+*.idea
+*.DS_Store
+*.xml
+*.class
+out/*
+
