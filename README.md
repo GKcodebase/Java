@@ -1,13 +1,19 @@
-# Java
-Java Code Snippets
+# Java Interview Prep
 
-    DSA
-    Collections
-    OOPS
-    Exception Handling
-    Strings
-    Garbage collections
-    Multithreading
-    JVM
-    Java 8
-    Java 11
+    1.Big-O Notation
+    2.Data Structures
+    3.Algorithm
+    4.Recurssion
+    5.Coding patterns
+    6.Object Oriented Design
+    7.Concurrency and multithreading
+    8.Popular algorithms
+    9.Popular datastructure
+    10.Exception handling 
+    11.Collections
+    12.Java 8 featuers
+    13.Java 11 featuers
+    14.JVM, JRE, JDK, Internal working
+    15.Code snippets
+    
+
