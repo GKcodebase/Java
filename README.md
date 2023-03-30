@@ -10,7 +10,7 @@
     8.Popular algorithms
     9.Popular datastructure
     10.Exception handling 
-    11.Collections
+    11.Collections and Strings
     12.Java 8 featuers
     13.Java 11 featuers
     14.JVM, JRE, JDK, Internal working
