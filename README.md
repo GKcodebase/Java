@@ -1,6 +1,6 @@
 # Java Interview Prep
 
-    1.Big-O Notation
+    1.Asymptotic Analysis
     2.Data Structures
     3.Algorithm
     4.Recurssion
