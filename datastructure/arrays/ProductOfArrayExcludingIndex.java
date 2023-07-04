@@ -34,6 +34,29 @@ public class ProductOfArrayExcludingIndex {
         return result;
     }
 
+    public int[] solution(int[] arr){
+        int n = arr.length;
+        int[] result = new int[n];
+        int i,temp=1;
+        // Product of elements on left side excluding arr[i]
+        for (i = 0; i < n; i++)
+        {
+            result[i] = temp;
+            temp *= arr[i];
+        }
+        // Initializing temp to 1 for product on right side
+        temp = 1;
+
+        // Product of elements on right side excluding arr[i]
+        for (i = n - 1; i >= 0; i--)
+        {
+            result[i] *= temp;
+            temp *= arr[i];
+        }
+
+        return result;
+    }
+
     /**
      * Main.
      *
@@ -43,6 +66,11 @@ public class ProductOfArrayExcludingIndex {
         int[] arr = {4,2,1,5,0,-1,-2};
         int[] result = new ProductOfArrayExcludingIndex().findProduct(arr);
         System.out.println("Output :: ");
+        for(int i:result){
+            System.out.print(i+", ");
+        }
+        result = new ProductOfArrayExcludingIndex().solution(arr);
+        System.out.println("\n Another Solution :: ");
         for(int i:result){
             System.out.print(i+", ");
         }
