@@ -8,7 +8,7 @@ import static java.util.Arrays.sort;
 /**
  * The type Find two numbers with given sum.
  */
-public class findTwoNumbersWithGivenSum {
+public class FindTwoNumbersWithGivenSum {
 
     /**
      * Find numbers int [ ].
@@ -72,14 +72,14 @@ public class findTwoNumbersWithGivenSum {
      */
     public static void main(String[] args){
         int[] arr = {1,21,3,14,5,60,7,6};
-        int[] ans =  new findTwoNumbersWithGivenSum().findNumbers(arr,27);
+        int[] ans =  new FindTwoNumbersWithGivenSum().findNumbers(arr,27);
         System.out.print("Output :: ");
         for(int i:ans){
             System.out.print(i+", ");
         }
 
 
-        int[] ans2 =  new findTwoNumbersWithGivenSum().quickSortAndFindSum(arr,27);
+        int[] ans2 =  new FindTwoNumbersWithGivenSum().quickSortAndFindSum(arr,27);
         System.out.print("\n"+"Solution with QuickSort :: ");
         for(int i:ans2){
             System.out.print(i+", ");
