@@ -119,6 +119,32 @@ public class SingleLinkedList {
         return false;
     }
 
+    public void deleteHead(){
+        headNode = headNode.nextNode;
+    }
+    public void deleteTail(){
+        Node temp = headNode;
+        while(temp.nextNode.nextNode!=null){
+            temp=temp.nextNode;
+        }
+        temp.nextNode=null;
+    }
+
+    /**
+     * Delete value.
+     *
+     * @param data the data
+     */
+    public void deleteValue(int data){
+        Node temp = headNode;
+        Node prev = headNode;
+        while(!temp.data.equals(data)){
+            prev = temp;
+            temp=temp.nextNode;
+        }
+        prev.nextNode=temp.nextNode;
+    }
+
     /**
      * Print list.
      */

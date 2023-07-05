@@ -16,6 +16,12 @@ public class BasicOperations {
         singleLinkedList.insertAfter(25,6);
         singleLinkedList.printList();
         System.out.println("\nData is present  "+singleLinkedList.search(41));
+        singleLinkedList.deleteHead();
+        singleLinkedList.deleteTail();
+        singleLinkedList.deleteValue(40);
+        System.out.print("After Deletion :: ");
+        singleLinkedList.printList();
+
     }
 
 }
