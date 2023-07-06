@@ -120,9 +120,11 @@ public class SingleLinkedList {
     }
 
     public void deleteHead(){
+        size--;
         headNode = headNode.nextNode;
     }
     public void deleteTail(){
+        size--;
         Node temp = headNode;
         while(temp.nextNode.nextNode!=null){
             temp=temp.nextNode;
@@ -136,6 +138,7 @@ public class SingleLinkedList {
      * @param data the data
      */
     public void deleteValue(int data){
+        size--;
         Node temp = headNode;
         Node prev = headNode;
         while(!temp.data.equals(data)){
