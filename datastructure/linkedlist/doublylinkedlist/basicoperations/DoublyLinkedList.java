@@ -78,4 +78,23 @@ public class DoublyLinkedList {
             headNode=newNode;
         }
     }
+
+    /**
+     * Insert at end.
+     *
+     * @param data the data
+     */
+    public void insertAtEnd(int data){
+        Node newNode = new Node(data);
+        Node temp = headNode;
+        if(headNode==null)
+            headNode=newNode;
+        else{
+            while(temp.nextNode!=null){
+                temp = temp.nextNode;
+            }
+            temp.nextNode=newNode;
+            newNode.prevNode=temp;
+        }
+    }
 }

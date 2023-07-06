@@ -14,6 +14,9 @@ public class BasicOperations {
         doublyLinkedList.insertAtHead(50);
         doublyLinkedList.insertAtHead(40);
         doublyLinkedList.insertAtHead(20);
+        doublyLinkedList.insertAtEnd(25);
+        doublyLinkedList.insertAtEnd(55);
+
         doublyLinkedList.printList();
     }
 }
