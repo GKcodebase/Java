@@ -69,6 +69,7 @@ public class DoublyLinkedList {
      * @param data the data
      */
     public void insertAtHead(int data){
+        size++;
         Node newNode = new Node(data);
         if(headNode==null)
             headNode=newNode;
@@ -85,6 +86,7 @@ public class DoublyLinkedList {
      * @param data the data
      */
     public void insertAtEnd(int data){
+        size++;
         Node newNode = new Node(data);
         Node temp = headNode;
         if(headNode==null)
@@ -96,5 +98,18 @@ public class DoublyLinkedList {
             temp.nextNode=newNode;
             newNode.prevNode=temp;
         }
+    }
+
+    /**
+     * Delete value.
+     *
+     * @param data the data
+     */
+    public void deleteValue(int data){
+        size--;
+        Node temp = headNode;
+        while(!temp.data.equals(data))
+            temp=temp.nextNode;
+        temp.prevNode.nextNode=temp.nextNode;
     }
 }

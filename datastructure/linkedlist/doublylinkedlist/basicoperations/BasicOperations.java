@@ -16,7 +16,9 @@ public class BasicOperations {
         doublyLinkedList.insertAtHead(20);
         doublyLinkedList.insertAtEnd(25);
         doublyLinkedList.insertAtEnd(55);
-
+        doublyLinkedList.printList();
+        System.out.print("\nList after deleting :: ");
+        doublyLinkedList.deleteValue(25);
         doublyLinkedList.printList();
     }
 }
