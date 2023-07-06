@@ -1,4 +1,4 @@
-package datastructure.linkedlist.basicoperations;
+package datastructure.linkedlist.singlylinkedlist.basicoperations;
 
 /**
  * The type Basic operations.
