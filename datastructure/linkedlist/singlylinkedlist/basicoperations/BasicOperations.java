@@ -21,6 +21,7 @@ public class BasicOperations {
         singleLinkedList.deleteValue(40);
         System.out.print("After Deletion :: ");
         singleLinkedList.printList();
+        singleLinkedList.length();
 
     }
 

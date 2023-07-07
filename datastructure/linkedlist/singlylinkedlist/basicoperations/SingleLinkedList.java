@@ -149,6 +149,20 @@ public class SingleLinkedList {
     }
 
     /**
+     * Length.
+     */
+    public void length(){
+        //return size;
+        int l=0;
+        Node temp = headNode;
+        while(temp!=null){
+            l++;
+            temp=temp.nextNode;
+        }
+        System.out.println("\nLength of th given list is :: "+l);
+    }
+
+    /**
      * Print list.
      */
     public void printList(){
