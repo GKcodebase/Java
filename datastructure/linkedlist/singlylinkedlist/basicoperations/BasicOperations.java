@@ -8,9 +8,13 @@ public class BasicOperations {
         SingleLinkedList singleLinkedList = new SingleLinkedList();
         singleLinkedList.insertAtFront(10);
         singleLinkedList.insertAtFront(20);
+        singleLinkedList.insertAtFront(20);
         singleLinkedList.insertAtFront(30);
         singleLinkedList.insertAtEnd(40);
+        singleLinkedList.insertAtEnd(40);
         singleLinkedList.insertAtEnd(50);
+        singleLinkedList.insertAtEnd(60);
+        singleLinkedList.insertAtEnd(60);
         singleLinkedList.insertAtEnd(60);
         singleLinkedList.insertAfter(15,5);
         singleLinkedList.insertAfter(25,6);
@@ -22,7 +26,10 @@ public class BasicOperations {
         System.out.print("After Deletion :: ");
         singleLinkedList.printList();
         singleLinkedList.length();
-        System.out.println("Middle of the list is :: "+singleLinkedList.getMiddle());
+        System.out.println("Middle of the list is :: "+singleLinkedList.getMiddle()+"\n");
+        singleLinkedList.removeRepeated();
+        singleLinkedList.printList();
+
 
     }
 

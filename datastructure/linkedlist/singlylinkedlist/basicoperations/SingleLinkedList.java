@@ -1,5 +1,8 @@
 package datastructure.linkedlist.singlylinkedlist.basicoperations;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * The type Single linked list.
  */
@@ -175,6 +178,25 @@ public class SingleLinkedList {
             slow = slow.nextNode;
         }
         return slow.data.toString();
+    }
+
+    /**
+     * Remove repeated.
+     */
+    public void removeRepeated(){
+        Map map = new HashMap();
+        Node temp = headNode;
+        Node prev = headNode;
+        while(temp!=null){
+            if(map.containsKey(temp.data)){
+                prev.nextNode=temp.nextNode;
+
+            }else{
+                map.put(temp.data,1);
+            }
+            prev=temp;
+            temp=temp.nextNode;
+        }
     }
 
     /**
