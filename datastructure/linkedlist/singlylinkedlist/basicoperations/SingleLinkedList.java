@@ -163,6 +163,21 @@ public class SingleLinkedList {
     }
 
     /**
+     * Get middle string.
+     *
+     * @return the string
+     */
+    public String getMiddle(){
+        Node fast = headNode;
+        Node slow = headNode;
+        while(fast.nextNode!=null && slow !=null){
+            fast = fast.nextNode.nextNode;
+            slow = slow.nextNode;
+        }
+        return slow.data.toString();
+    }
+
+    /**
      * Print list.
      */
     public void printList(){

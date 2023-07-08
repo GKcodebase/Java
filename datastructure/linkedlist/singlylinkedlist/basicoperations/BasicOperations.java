@@ -22,6 +22,7 @@ public class BasicOperations {
         System.out.print("After Deletion :: ");
         singleLinkedList.printList();
         singleLinkedList.length();
+        System.out.println("Middle of the list is :: "+singleLinkedList.getMiddle());
 
     }
 
