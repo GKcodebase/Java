@@ -236,6 +236,26 @@ public class SingleLinkedList {
     }
 
     /**
+     * Nth node from end string.
+     *
+     * @param n the n
+     * @return the string
+     */
+    public String nthNodeFromEnd(int n){
+        Node temp = headNode;
+        Node fast  = headNode;
+        while(n>0&&fast!=null){
+            fast=fast.nextNode;
+            n--;
+        }
+        while(fast!=null){
+            fast= fast.nextNode;
+            temp=temp.nextNode;
+        }
+        return temp.data.toString();
+    }
+
+    /**
      * Print list.
      */
     public void printList(){

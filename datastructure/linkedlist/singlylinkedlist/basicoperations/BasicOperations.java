@@ -38,7 +38,8 @@ public class BasicOperations {
         list2.insertAtFront(19);
         list2.insertAtFront(14);
         list2.printList();
-        singleLinkedList.unionAndIntersection(list2,singleLinkedList);
+//        singleLinkedList.unionAndIntersection(list2,singleLinkedList);
+        System.out.println("\nNth node from end is :: "+singleLinkedList.nthNodeFromEnd(5));
 
 
 
