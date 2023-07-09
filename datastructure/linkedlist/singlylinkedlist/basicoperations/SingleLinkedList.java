@@ -200,6 +200,42 @@ public class SingleLinkedList {
     }
 
     /**
+     * Union and intersection.
+     *
+     * @param list1 the list 1
+     * @param list2 the list 2
+     */
+    public void unionAndIntersection(SingleLinkedList list1, SingleLinkedList list2){
+        Map map = new HashMap();
+        Node temp = list1.headNode;
+        SingleLinkedList intersection  = new SingleLinkedList();
+        while(temp!=null){
+            map.put(temp.data,1);
+            temp=temp.nextNode;
+        }
+        while(list2.headNode!=null){
+            if(map.containsKey(list2.headNode.data)){
+                    intersection.insertAtFront((int)list2.headNode.data);
+            }else{
+                list1.insertAtEnd((int)list2.headNode.data);
+            }
+            list2.headNode=list2.headNode.nextNode;
+        }
+        System.out.print("\n Intersection list :: " );
+        Node it = intersection.headNode;
+        while(it!=null){
+            System.out.print(it.data+" ");
+            it=it.nextNode;
+        }
+
+        System.out.print("\n Union list :: " );
+        while(list1.headNode!=null){
+            System.out.print(list1.headNode.data+" ");
+            list1.headNode=list1.headNode.nextNode;
+        }
+    }
+
+    /**
      * Print list.
      */
     public void printList(){

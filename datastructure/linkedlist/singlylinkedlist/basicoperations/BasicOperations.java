@@ -29,6 +29,17 @@ public class BasicOperations {
         System.out.println("Middle of the list is :: "+singleLinkedList.getMiddle()+"\n");
         singleLinkedList.removeRepeated();
         singleLinkedList.printList();
+        System.out.println();
+        SingleLinkedList list2 = new SingleLinkedList();
+        list2.insertAtFront(10);
+        list2.insertAtFront(40);
+        list2.insertAtFront(60);
+        list2.insertAtFront(1);
+        list2.insertAtFront(19);
+        list2.insertAtFront(14);
+        list2.printList();
+        singleLinkedList.unionAndIntersection(list2,singleLinkedList);
+
 
 
     }
