@@ -106,7 +106,17 @@ public class LinkedListWithTailNode {
         tailNode=tailNode.prevNode;
         tailNode.nextNode=null;
     }
-
+    public boolean isPalindrome(){
+        Node tempHead = headNode;
+        Node tempTail = tailNode;
+        while(tempHead!=null && tempTail!=null){
+            if(tempHead.data != tempTail.data)
+                return false;
+            tempTail=tempTail.prevNode;
+            tempHead=tempHead.nextNode;
+        }
+        return true;
+    }
     /**
      * Print list.
      */
@@ -126,17 +136,17 @@ public class LinkedListWithTailNode {
      */
     public static void main(String [] args){
          LinkedListWithTailNode linkedList = new LinkedListWithTailNode();
-         linkedList.insertHead(10);
-         linkedList.insertHead(9);
          linkedList.insertHead(5);
-         linkedList.insertTail(20);
-         linkedList.insertTail(30);
+         linkedList.insertHead(9);
+         linkedList.insertHead(10);
+         linkedList.insertTail(5);
+         linkedList.insertTail(9);
          linkedList.insertTail(35);
          linkedList.printList();
-         linkedList.deleteHead();
          linkedList.deleteHead();
          linkedList.deleteTail();
         System.out.print("\n List after deletion :: ");
          linkedList.printList();
+         System.out.println("\nIs the list palindrome :: "+linkedList.isPalindrome());
     }
 }
