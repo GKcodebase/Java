@@ -57,7 +57,7 @@ public class ParenthesisChecker {
      * @param args the args
      */
     public static void main(String[] args){
-        String s1 = "{}[{()}]()";
+        String s1 = "{}[{()}](){}";
         String s2 = "{({)]";
 
         System.out.println("The string "+s1+ " check is "+checkParenthesis(s1));
