@@ -69,7 +69,7 @@ public class Stack <V>{
         if(isFull()){
             System.out.println("Stack is full.");
         }else{
-            arr[top++] = value;
+            arr[++top] = value;
         }
     }
 

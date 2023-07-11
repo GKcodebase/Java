@@ -86,7 +86,6 @@ public class Queue <V>{
         V temp = array[front];
         front = (front + 1) % maxSize; //to keep the index in range
         currentSize--;
-
         return temp;
     }
 }
