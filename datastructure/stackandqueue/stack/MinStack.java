@@ -2,5 +2,7 @@ package datastructure.stackandqueue.stack;
 
 public class MinStack {
 
-    public static void minPriStack
+    public static void minPriStack(){
+
+    }
 }
