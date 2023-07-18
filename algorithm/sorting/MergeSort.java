@@ -50,10 +50,10 @@ public class MergeSort {
         int leftArr[] = new int[sizeLeft];
         int rightArr[] = new int[sizeRight];
 
-        for (i = 0; i < sizeLeft; i++)
-            leftArr[i] = arr[left + i];
-        for (j = 0; j < sizeRight; j++)
-            rightArr[j] = arr[mid + 1 + j];
+        for( i=0;i<sizeLeft;i++)
+            leftArr[i]=arr[left+i];
+        for(j=0;j<sizeRight;j++)
+            rightArr[j]=arr[mid+1+j];
 
         i=0;
         j=0;
@@ -62,30 +62,23 @@ public class MergeSort {
         // This is the main part of the algorithm
         // Iterate over both arrays and copy the element that is smaller to the
         // given array.
-        while (i < sizeLeft && j < sizeRight) {
-            if (leftArr[i] <= rightArr[j]) {
-                arr[k] = leftArr[i];
-                i++;
-            } else {
-                arr[k] = rightArr[j];
-                j++;
+        while(i<sizeLeft&&j<sizeRight){
+            if(leftArr[i]<=rightArr[j]){
+                arr[k++]=leftArr[i++];
+            }else{
+                arr[k++]=rightArr[j++];
             }
-            k++;
         }
 
 
         // Copying the remaining elements of leftArr[], if there are any
-        while (i < sizeLeft) {
-            arr[k] = leftArr[i];
-            i++;
-            k++;
+        while(i<sizeLeft){
+            arr[k++]=leftArr[i++];
         }
 
         // Copy the remaining elements of rightArr[], if there are any
-        while (j < sizeRight) {
-            arr[k] = rightArr[j];
-            j++;
-            k++;
+        while(j<sizeRight){
+            arr[k++]=rightArr[j++];
         }
     }
 
