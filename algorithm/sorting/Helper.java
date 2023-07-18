@@ -56,4 +56,17 @@ class Helper {
         }
         return maxInd;
     }
+
+    /**
+     * Swap.
+     *
+     * @param array the array
+     * @param i     the
+     * @param j     the j
+     */
+    static void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 }
