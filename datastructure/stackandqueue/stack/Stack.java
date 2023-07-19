@@ -109,4 +109,15 @@ public class Stack<V> {
         return array[top--]; //returns value and top and decrements the top
     }
 
+    /**
+     * Peek v.
+     *
+     * @return the v
+     */
+    public V peek(){
+        if(isEmpty())
+            return null;
+        return array[top];
+    }
+
 }
