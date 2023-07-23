@@ -5,15 +5,15 @@ import java.util.LinkedList;
 /**
  * The type Adjacency list graph.
  */
-public class AdjacencyListGraph {
+public class AdjacencyListGraph implements Graph {
     /**
      * The Vertices.
      */
-    int vertices;
+    public int vertices;
     /**
      * The Adjacency list.
      */
-    LinkedList<Integer> adjacencyList[];
+    public LinkedList<Integer> adjacencyList[];
 
 
     /**
@@ -32,7 +32,8 @@ public class AdjacencyListGraph {
     /**
      * Print graph.
      */
-    void printGraph() {
+    @Override
+    public void printGraph() {
         System.out.println("Adjacency List of Directed Graph");
         for (int i = 0; i < vertices; i++) {
             if (adjacencyList[i] != null) {
@@ -55,7 +56,8 @@ public class AdjacencyListGraph {
      * @param source      the source
      * @param destination the destination
      */
-    void addEdge(int source, int destination) {
+    @Override
+    public void addEdge(int source, int destination) {
         if (source < vertices && destination < vertices)
             adjacencyList[source].addLast(destination);
     }
