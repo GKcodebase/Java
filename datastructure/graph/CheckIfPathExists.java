@@ -4,7 +4,6 @@ import java.util.LinkedList;
 
 public class CheckIfPathExists {
     public static boolean checkPath(AdjacencyListGraph graph,int source,int destination){
-        boolean flag = false;
         LinkedList<Integer> list =  null;
         if (graph.adjacencyList[source]!=null)
             list=graph.adjacencyList[source];
