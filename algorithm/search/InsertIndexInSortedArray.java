@@ -6,6 +6,7 @@ package algorithm.search;
 public class InsertIndexInSortedArray {
     /**
      * Insert position int.
+     * This will only work if element is only present.
      *
      * @param arr    the arr
      * @param target the target
