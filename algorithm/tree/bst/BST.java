@@ -5,7 +5,7 @@ import static algorithm.tree.bst.Helper.printTree;
 /**
  * The type Insertion.
  */
-public class Insertion {
+public class BST {
     /**
      * Insert node.
      *
@@ -24,7 +24,7 @@ public class Insertion {
         }
         return root;
     }
-
+    
     /**
      * The entry point of application.
      *
