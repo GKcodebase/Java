@@ -1,5 +1,7 @@
 package algorithm.tree.bst;
 
+import javax.swing.plaf.synth.SynthLookAndFeel;
+
 import static algorithm.tree.bst.Helper.printTree;
 
 /**
@@ -14,17 +16,35 @@ public class BST {
      * @return the node
      */
     public static Node insert(int data, Node root) {
+        Node temp = root;
         Node newNode = new Node(data);
         if (root == null) {
             return newNode;
-        } else if (Integer.valueOf(root.data.toString()) <= data) {
-            root.right = insert(data, root.right);
+        } else if (Integer.valueOf(temp.data.toString()) <= data) {
+            root.right = insert(data, temp.right);
         } else {
-            root.left = insert(data, root.left);
+            root.left = insert(data, temp.left);
         }
-        return root;
+        return temp;
     }
-    
+
+    /**
+     * Search boolean.
+     *
+     * @param data the data
+     * @param root the root
+     * @return the boolean
+     */
+    public static boolean search(int data, Node root) {
+        if (root == null)
+            return false;
+        else if (root.data.equals(data))
+            return true;
+        else if (Integer.valueOf(root.data.toString()) < data)
+            return search(data, root.right);
+        else
+            return search(data, root.left);
+    }
     /**
      * The entry point of application.
      *
@@ -38,8 +58,10 @@ public class BST {
         insert(40, root);
         insert(5, root);
         insert(15, root);
-
         printTree(root);
+        System.out.println("\nIs 22 present in BST " + search(22,root));
+        System.out.println("Is 25 present in BST " + search(25,root));
+
 
     }
 }
