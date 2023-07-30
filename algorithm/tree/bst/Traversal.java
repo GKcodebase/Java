@@ -16,4 +16,17 @@ public class Traversal {
         preOrderTraversal(root.left);
         preOrderTraversal(root.right);
     }
+
+    /**
+     * In order traversal.
+     *
+     * @param root the root
+     */
+    public static void inOrderTraversal(Node root){
+        if(null == root)
+            return;
+        inOrderTraversal(root.left);
+        System.out.print(root.data+" ");
+        inOrderTraversal(root.right);
+    }
 }
