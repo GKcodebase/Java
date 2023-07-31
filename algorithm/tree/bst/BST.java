@@ -3,7 +3,7 @@ package algorithm.tree.bst;
 import javax.swing.plaf.synth.SynthLookAndFeel;
 
 import static algorithm.tree.bst.Helper.printTree;
-import static algorithm.tree.bst.Traversal.preOrderTraversal;
+import static algorithm.tree.bst.Traversal.*;
 
 /**
  * The type Insertion.
@@ -46,24 +46,29 @@ public class BST {
         else
             return search(data, root.left);
     }
+
     /**
      * The entry point of application.
      *
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        Node root = new Node<>(20);
-        insert(10, root);
-        insert(30, root);
-        insert(25, root);
-        insert(40, root);
+        Node root = new Node<>(6);
+        insert(4, root);
+        insert(2, root);
         insert(5, root);
-        insert(15, root);
+        insert(9, root);
+        insert(8, root);
+        insert(12, root);
         printTree(root);
-        System.out.println("\nIs 22 present in BST " + search(22,root));
-        System.out.println("Is 25 present in BST " + search(25,root));
+        System.out.println("\nIs 22 present in BST " + search(22, root));
+        System.out.println("Is 25 present in BST " + search(25, root));
         System.out.print("PreOrder Traversal in Tree : ");
         preOrderTraversal(root);
+        System.out.print("\nInOrder Traversal in Tree : ");
+        inOrderTraversal(root);
+        System.out.print("\nPostOrder Traversal in Tree : ");
+        postOrderTraversal(root);
 
     }
 }
