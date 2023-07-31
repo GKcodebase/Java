@@ -29,4 +29,17 @@ public class Traversal {
         System.out.print(root.data+" ");
         inOrderTraversal(root.right);
     }
+
+    /**
+     * Post order traversal.
+     *
+     * @param root the root
+     */
+    public static void postOrderTraversal(Node root){
+        if(null==root)
+            return;
+        postOrderTraversal(root.left);
+        postOrderTraversal(root.right);
+        System.out.print(root.data+" ");
+    }
 }
