@@ -48,6 +48,72 @@ public class BST {
     }
 
     /**
+     * Delete boolean.
+     *
+     * @param value       the value
+     * @param currentNode the current node
+     * @return the boolean
+     */
+    public static boolean delete(int value, Node currentNode) {
+        Node root = currentNode;
+        if (null == currentNode)
+            return false;
+        Node parent = null;
+        while (null != currentNode && value != Integer.valueOf(currentNode.data.toString())) {
+            parent = currentNode;
+            if (Integer.valueOf(currentNode.data.toString()) > value)
+                currentNode = currentNode.left;
+            else
+                currentNode = currentNode.right;
+        }
+        if (null == currentNode)
+            return false;
+        else if (null == currentNode.left && null == currentNode.right) {
+            if (root.data == currentNode.data) {
+                root = null;
+                return true;
+            } else if (Integer.valueOf(currentNode.data.toString()) < Integer.valueOf(parent.data.toString())) {
+                parent.left = null;
+                return true;
+            } else {
+                parent.right = null;
+                return true;
+            }
+        } else if (currentNode.right == null) {
+            if (root.data == currentNode.data) {
+                currentNode.right = null;
+                return true;
+            } else if (Integer.valueOf(currentNode.data.toString()) < Integer.valueOf(parent.data.toString())) {
+                parent.left = (currentNode.right);
+                return true;
+            } else {
+                parent.right = (currentNode.right);
+                return true;
+            }
+        } else {
+            Node leastNode = findLeastNode(currentNode.right);
+            //Set CurrentNode's Data to the least value in its right-subtree
+            int temp = (int) leastNode.data;
+            delete(temp, root);
+            currentNode.data = (temp);
+            //Delete the leafNode which had the least value
+            return true;
+        }
+    }
+
+    private static Node findLeastNode(Node currentNode) {
+
+        Node temp = currentNode;
+
+        while (temp.left != null) {
+            temp = temp.left;
+        }
+
+        return temp;
+
+    }
+
+    /**
      * The entry point of application.
      *
      * @param args the input arguments
@@ -60,7 +126,6 @@ public class BST {
         insert(9, root);
         insert(8, root);
         insert(12, root);
-        printTree(root);
         System.out.println("\nIs 22 present in BST " + search(22, root));
         System.out.println("Is 25 present in BST " + search(25, root));
         System.out.print("PreOrder Traversal in Tree : ");
@@ -69,6 +134,12 @@ public class BST {
         inOrderTraversal(root);
         System.out.print("\nPostOrder Traversal in Tree : ");
         postOrderTraversal(root);
+        System.out.println();
+        printTree(root);
+        delete(9,root);
+        System.out.println();
+        printTree(root);
+
 
     }
 }
