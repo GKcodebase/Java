@@ -1,6 +1,5 @@
 package algorithm.tree.bst;
 
-import javax.swing.plaf.synth.SynthLookAndFeel;
 
 import static algorithm.tree.bst.Helper.printTree;
 import static algorithm.tree.bst.Traversal.*;
