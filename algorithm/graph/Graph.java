@@ -1,5 +1,6 @@
 package algorithm.graph;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -67,6 +68,21 @@ class Graph {
                 System.out.println("|" + i + "| => " + "null");
             }
         }
+    }
+
+    /**
+     * Gets transpose.
+     *
+     * @return the transpose
+     */
+    public Graph getTranspose(Graph graph) {
+        Graph g = new Graph(vertices);
+        for (int j = 0; j < vertices; j++) {
+            Iterator<Integer> i = adjacencyList[j].listIterator();
+            while (i.hasNext())
+                g.adjacencyList[i.next()].add(j);
+        }
+        return g;
     }
 }
 
