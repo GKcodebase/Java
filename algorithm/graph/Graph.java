@@ -7,8 +7,14 @@ import java.util.LinkedList;
  * The type Graph.
  */
 class Graph {
-    private int vertices; //number of vertices
-    private LinkedList<Integer> adjacencyList[]; //Adjacency Lists
+    /**
+     * The Vertices.
+     */
+    private int vertices;
+    /**
+     * The Adjacency list.
+     */
+    private LinkedList<Integer> adjacencyList[];
 
     /**
      * Instantiates a new Graph.
