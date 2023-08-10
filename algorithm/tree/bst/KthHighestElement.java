@@ -1,5 +1,8 @@
 package algorithm.tree.bst;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * The type Kth highest element.
  */
@@ -48,6 +51,21 @@ public class KthHighestElement {
 
     }
 
+    private static List<Integer> getInorderTraversal(Node root,List<Integer> inorder){
+        if(null==root)
+            return inorder;
+        getInorderTraversal(root.left,inorder);
+        inorder.add((Integer) root.data);
+        getInorderTraversal(root.right,inorder);
+
+        return inorder;
+    }
+    public static int findKthMaxInorder(Node root,int k){
+        List<Integer> inorderList = new ArrayList<>();
+        inorderList=getInorderTraversal(root,inorderList);
+        return inorderList.get(inorderList.size()-k);
+    }
+
     /**
      * Main.
      *
@@ -64,6 +82,8 @@ public class KthHighestElement {
         bsT.add(2);
         bsT.add(8);
 
-        System.out.println(findKthMax(bsT.getRoot(), 3));
+        System.out.println("Get the kth Max element :: "+findKthMaxInorder(bsT.getRoot(), 3));
+        System.out.println("Get the kth Max element :: "+findKthMax(bsT.getRoot(), 3));
+
     }
 }
