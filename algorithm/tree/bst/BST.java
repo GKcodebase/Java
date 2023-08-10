@@ -8,6 +8,34 @@ import static algorithm.tree.bst.Traversal.*;
  * The type Insertion.
  */
 public class BST {
+
+    /**
+     * The Root.
+     */
+    private Node root;
+
+
+    /**
+     * Gets root.
+     *
+     * @return the root
+     */
+    public Node getRoot() {
+        return root;
+    }
+
+
+    /**
+     * Add boolean.
+     *
+     * @param value the value
+     * @return the boolean
+     */
+    public boolean add(int value) {
+        root = insert(value, this.root);
+        return true;
+    }
+
     /**
      * Insert node.
      *
@@ -100,6 +128,12 @@ public class BST {
         }
     }
 
+    /**
+     * Find least node node.
+     *
+     * @param currentNode the current node
+     * @return the node
+     */
     private static Node findLeastNode(Node currentNode) {
 
         Node temp = currentNode;
