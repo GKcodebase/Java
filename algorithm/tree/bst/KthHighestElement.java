@@ -18,7 +18,6 @@ public class KthHighestElement {
      * @return the int
      */
     public static int findKthMax(Node root, int k) {
-        int count = 0;
         Node node = findKthMaxHelper(root, k);
         if (null != node)
             return (int) node.data;
