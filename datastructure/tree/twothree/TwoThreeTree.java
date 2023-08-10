@@ -1,4 +1,4 @@
-package algorithm.tree.twothree;
+package datastructure.tree.twothree;
 
 public class TwoThreeTree {
 

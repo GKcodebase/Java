@@ -1,4 +1,4 @@
-package algorithm.tree.avl;
+package datastructure.tree.avl;
 
 public class AVL {
     //TODO

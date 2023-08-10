@@ -1,4 +1,4 @@
-package algorithm.tree.bst;
+package datastructure.tree.bst;
 
 /**
  * The type Helper.
@@ -17,4 +17,5 @@ public class Helper {
         printTree(current.right);
 
     }
+
 }

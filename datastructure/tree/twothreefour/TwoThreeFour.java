@@ -1,4 +1,4 @@
-package algorithm.tree.twothreefour;
+package datastructure.tree.twothreefour;
 
 public class TwoThreeFour {
     //TODO

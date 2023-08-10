@@ -1,4 +1,4 @@
-package algorithm.tree.bst;
+package datastructure.tree.bst;
 
 /**
  * The type Node in kth distance.

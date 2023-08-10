@@ -1,4 +1,4 @@
-package algorithm.tree.bst;
+package datastructure.tree.bst;
 
 
 /**

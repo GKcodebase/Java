@@ -1,4 +1,4 @@
-package algorithm.tree.redblack;
+package datastructure.tree.redblack;
 
 /**
  * The type Red black tree.

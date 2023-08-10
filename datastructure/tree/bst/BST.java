@@ -1,8 +1,8 @@
-package algorithm.tree.bst;
+package datastructure.tree.bst;
 
 
-import static algorithm.tree.bst.Helper.printTree;
-import static algorithm.tree.bst.Traversal.*;
+import static datastructure.tree.bst.Helper.printTree;
+import static datastructure.tree.bst.Traversal.*;
 
 /**
  * The type Insertion.
