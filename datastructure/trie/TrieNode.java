@@ -6,6 +6,24 @@ package datastructure.trie;
 public class TrieNode {
 
     /**
+     * Get children trie node [ ].
+     *
+     * @return the trie node [ ]
+     */
+    public TrieNode[] getChildren() {
+        return children;
+    }
+
+    /**
+     * Is end word boolean.
+     *
+     * @return the boolean
+     */
+    public boolean isEndWord() {
+        return isEndWord;
+    }
+
+    /**
      * The Children.
      */
     private TrieNode children[];
