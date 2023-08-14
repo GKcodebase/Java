@@ -61,7 +61,21 @@ public class Trie {
      * @return the boolean
      */
 //Function to search given key in Trie
-    public boolean search(String key){ return false;}
+    public boolean search(String key){
+        if(null==key)
+            return false;
+        key=key.toLowerCase();
+        TrieNode currentNode = this.root;
+        int index =0;
+
+        for(int level =0;level<=key.length();level++){
+            index = getIndex(key.charAt(level));
+            if(currentNode.getChildren()[index]==null)
+                return false;
+            currentNode=currentNode.getChildren()[index];
+        }
+        return currentNode.isEndWord();
+    }
 
     /**
      * Delete boolean.
