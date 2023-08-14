@@ -32,10 +32,9 @@ public class Trie {
      * Insert.
      *
      * @param key   the key
-     * @param value the value
      */
 //Function to insert a key,value pair in the Trie
-    public void insert(String key,int value){
+    public void insert(String key){
 
         if(null==key){
             System.out.println("Null Key can not be Inserted!");
