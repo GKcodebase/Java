@@ -1,5 +1,7 @@
 package datastructure.trie;
 
+import java.util.Locale;
+
 /**
  * The type Trie.
  */
@@ -33,7 +35,25 @@ public class Trie {
      * @param value the value
      */
 //Function to insert a key,value pair in the Trie
-    public void insert(String key,int value){}
+    public void insert(String key,int value){
+
+        if(null==key){
+            System.out.println("Null Key can not be Inserted!");
+            return;
+        }
+        key=key.toLowerCase();
+        TrieNode node = this.root;
+        int index =0;
+
+        for(int level =0 ;level<key.length();level++){
+            index=getIndex(key.charAt(level));
+            if(null==node.getChildren()[index]){
+                node.getChildren()[index]=new TrieNode();
+            }
+            node=node.getChildren()[index];
+        }
+        node.markAsLeaf();
+    }
 
     /**
      * Search boolean.
