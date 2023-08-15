@@ -6,10 +6,20 @@ import java.util.Locale;
  * The type Trie.
  */
 public class Trie {
+
     /**
      * The Root.
      */
     private TrieNode root;
+
+    /**
+     * Gets root.
+     *
+     * @return the root
+     */
+    public TrieNode getRoot() {
+        return root;
+    }
 
     /**
      * Instantiates a new Trie.
