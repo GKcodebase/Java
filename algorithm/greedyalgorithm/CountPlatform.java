@@ -54,7 +54,6 @@ public class CountPlatform {
         int answer = countPlatform(arrival, departure);
         System.out.println("Minimum Number of Platforms Required for Plan1 = " + answer);
 
-
         System.out.println();
 
         // Example 2
@@ -62,6 +61,5 @@ public class CountPlatform {
         int departure1[] = {230, 240, 320, 430, 400, 520};
         int answer2 = countPlatform(arrival1, departure1);
         System.out.println("Minimum Number of Platforms Required for Plan2 = " + answer2);
-
     }
 }
