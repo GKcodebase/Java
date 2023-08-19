@@ -1,6 +1,15 @@
 package algorithm.greedyalgorithm;
 
+/**
+ * The type Egyptian fraction.
+ */
 public class EgyptianFraction {
+    /**
+     * Gets fractions.
+     *
+     * @param numerator   the numerator
+     * @param denominator the denominator
+     */
     public static void getFractions(int numerator, int denominator) {
         //if either numerator or denominator is zero
         if (denominator == 0 || numerator == 0) {
@@ -29,6 +38,12 @@ public class EgyptianFraction {
         getFractions(numerator * n - denominator, denominator * n);
 
     }
+
+    /**
+     * Main.
+     *
+     * @param args the args
+     */
     public static void main(String[] args){
 
         //Example 1
