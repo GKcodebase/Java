@@ -30,6 +30,18 @@ public class TwoNumberWithGivenSum {
     }
 
     /**
+     * Quick sort and binary search int [ ].
+     *
+     * @param arr the arr
+     * @param sum the sum
+     * @return the int [ ]
+     */
+    public static int[] quickSortAndBinarySearch(int[] arr, int sum){
+        int[] ans = new int[2];
+        return ans;
+    }
+
+    /**
      * Main.
      *
      * @param args the args

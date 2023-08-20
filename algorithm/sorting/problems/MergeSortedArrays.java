@@ -58,6 +58,17 @@ public class MergeSortedArrays {
     }
 
     /**
+     * Get median using partition array float.
+     *
+     * @param arr1 the arr 1
+     * @param arr2 the arr 2
+     * @return the float
+     */
+    public static float getMedianUsingPartitionArray(int[] arr1, int[] arr2){
+        return 0.0F;
+    }
+
+    /**
      * The entry point of application.
      *
      * @param args the input arguments
