@@ -21,15 +21,15 @@ public class FibonacciNumber {
     }
 
     /**
-     * Fib int.
+     * Gets fibonacci using recursion.
      *
      * @param i the
-     * @return the int
+     * @return the fibonacci using recursion
      */
-    public static int fib(int i) {
+    public static int getFibonacciUsingRecursion(int i) {
         if (i <= 1)
             return i;
-        return fib(i - 1) + fib(i - 2);
+        return getFibonacciUsingRecursion(i - 1) + getFibonacciUsingRecursion(i - 2);
     }
 
     /**
@@ -39,7 +39,7 @@ public class FibonacciNumber {
      */
     public static void main(String[] args){
         System.out.println("Fibonacci number of 6 is "+getFibonacciUsingDynamicProgramming(6));
-        System.out.println("Fibonacci number of 5 is "+fib(5));
+        System.out.println("Fibonacci number of 5 is "+getFibonacciUsingRecursion(5));
 
     }
 }
