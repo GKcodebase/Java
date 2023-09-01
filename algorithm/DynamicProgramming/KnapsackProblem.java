@@ -102,7 +102,8 @@ public class KnapsackProblem
         int profits[] = {1, 6, 10, 16}; // The values of the jewelry
         int weights[] = {1, 2, 3, 5}; // The weight of each
         System.out.println("Total knapsack profit ---> " + knapSack(profits, 4, weights, 4,  7, 0));
-        System.out.println("Total knapsack profit ---> " + knapSack(profits, 4, weights, 4, 6));
+        System.out.println("Total knapsack profit ---> " + knapSack(profits, 4, weights, 4, 6, 0));
+        System.out.println("Total knapsack (dynamic programming) profit ---> " + knapSack(profits, 4, weights, 4, 6));
 
     }
 }
