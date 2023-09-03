@@ -1,7 +1,5 @@
 package datastructure.trie;
 
-import java.util.Locale;
-
 /**
  * The type Trie.
  */
