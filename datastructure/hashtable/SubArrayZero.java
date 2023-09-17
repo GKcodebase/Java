@@ -19,7 +19,7 @@ public class SubArrayZero {
         //arr[i] == 0 or sum == 0 or HashMap already contains the sum
         //If you completely traverse the array and havent found any of the above three
         //conditions then simply return false.
-        HashMap< Integer,Integer > hMap = new HashMap < >();
+        HashMap<Integer, Integer> hMap = new HashMap<>();
 
         int sum = 0;
 
@@ -42,7 +42,7 @@ public class SubArrayZero {
      */
     public static void main(String args[]) {
 
-        int[] arr = {6, 4, -7, 3, 12, 9};
+        int[] arr = {6, 4, 19, -2, 2, 12, 9};
         System.out.println(findSubZero(arr));
 
     }
