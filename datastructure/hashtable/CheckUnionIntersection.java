@@ -71,7 +71,6 @@ public class CheckUnionIntersection {
             //add the elements which have been visited before into the result
             if (visited.contains(current.data)) {
                 result.insertAtHead(current.data);
-                visited.remove(current.data);
             }
             current = current.nextNode;
         }
