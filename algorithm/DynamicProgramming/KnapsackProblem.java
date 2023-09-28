@@ -1,7 +1,7 @@
 package algorithm.DynamicProgramming;
 
 /**
- * The Knapsack problem.
+ * The   Knapsack problem.
  */
 public class KnapsackProblem
 {
