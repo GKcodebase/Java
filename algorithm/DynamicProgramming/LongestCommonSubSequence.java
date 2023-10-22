@@ -44,4 +44,18 @@ public class LongestCommonSubSequence {
             return dp[m][n] = Math.max(getSubSequencesUtil(m - 1, n, a, b, dp), getSubSequencesUtil(m, n - 1, a, b, dp));
         }
     }
+
+    /**
+     * Main.
+     *
+     * @param args the args
+     */
+    public static void main(String args[]) {
+        String s1 = "0abc321";
+        String s2 = "123abcdef";
+        String s3 = "educative.io/expl";
+        String s4 = "educative.io/edpr";
+        System.out.println(getSubSequences(s1.length(), s2.length(), s1, s2));
+        System.out.println(getSubSequences(s3.length(), s4.length(), s3, s4));
+    }
 }
