@@ -2,12 +2,35 @@ package algorithm.DynamicProgramming;
 
 import java.util.HashMap;
 
+/**
+ * The type Strings interleaving.
+ */
 public class StringsInterleaving {
+    /**
+     * Find si object.
+     *
+     * @param m the m
+     * @param n the n
+     * @param p the p
+     * @return the object
+     */
     public static Object findSI(String m, String n, String p) {
         HashMap< String, Boolean > lookupTable = new HashMap < String, Boolean > ();
         return findSIRecursive(lookupTable, m, n, p, 0, 0, 0);
     }
 
+    /**
+     * Find si recursive boolean.
+     *
+     * @param lookupTable the lookup table
+     * @param m           the m
+     * @param n           the n
+     * @param p           the p
+     * @param mIndex      the m index
+     * @param nIndex      the n index
+     * @param pIndex      the p index
+     * @return the boolean
+     */
     private static boolean findSIRecursive(HashMap<String, Boolean> lookupTable, String m, String n, String p, int mIndex, int nIndex, int pIndex) {
         if (mIndex == m.length() && nIndex == n.length() && pIndex == p.length())
             return true;
@@ -31,6 +54,12 @@ public class StringsInterleaving {
             x = lookupTable.get(subProblemKey);
         return x;
     }
+
+    /**
+     * Main.
+     *
+     * @param args the args
+     */
     public static void main(String args[]) {
         System.out.println(findSI("abd", "cef", "adcbef"));
         System.out.println(findSI("abc", "def", "abdccf"));
