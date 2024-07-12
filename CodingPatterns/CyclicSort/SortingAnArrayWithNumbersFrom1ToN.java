@@ -13,7 +13,7 @@ public class SortingAnArrayWithNumbersFrom1ToN {
      * @param i   the
      * @param j   the j
      */
-    private static void swap(int[] arr, int i, int j) {
+    static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
