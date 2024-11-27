@@ -36,10 +36,11 @@ public class Collection {
         // TreeSet (Sorted Set)
         TreeSet<Integer> treeSet = new TreeSet<>();
         int element = 100;
-        treeSet.first();           // Smallest element
-        treeSet.last();            // Largest element
+
         treeSet.lower(element);    // Strictly smaller
         treeSet.higher(element);   // Strictly larger
+        //treeSet.first();           // Smallest element
+        //treeSet.last();            // Largest element
         treeSet.contains(element);
 
         //HashMap
@@ -67,7 +68,7 @@ public class Collection {
         Stack<Integer> stack = new Stack<>();
         stack.push(100);
         stack.pop();
-        stack.peek();
+        //stack.peek();
         stack.contains(100);
 
         //Queue (FIFO)
