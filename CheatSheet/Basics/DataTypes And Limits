@@ -1,0 +1,14 @@
+// Integer Types
+byte    : -128 to 127
+short   : -32,768 to 32,767
+int     : -2^31 to 2^31 - 1 (±10^9)
+long    : -2^63 to 2^63 - 1
+
+// Floating Point
+double  : 64-bit, ±1.8 × 10^308
+float   : 32-bit, ±3.4 × 10^38
+
+// Useful Constants
+Integer.MAX_VALUE  : 2^31 - 1
+Integer.MIN_VALUE  : -2^31
+Long.MAX_VALUE     : 2^63 - 1
