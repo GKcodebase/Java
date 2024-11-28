@@ -52,7 +52,7 @@ public class Collection {
         map.getOrDefault("key", 0);
 
         //TreeMap Sorted Tree map
-        TreeMap<String, Integer> treeMap = new TreeMap<>();
+        TreeMap<Strings, Integer> treeMap = new TreeMap<>();
 
         //Priority Queue (Min Heap)
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
