@@ -1,4 +1,4 @@
-package CheatSheet.Basics.Algorithms;
+package CheatSheet.Algorithms;
 
 import java.util.ArrayList;
 import java.util.List;
