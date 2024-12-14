@@ -1,4 +1,4 @@
-package CheatSheet.Algorithms;
+package CheatSheet.SearchAlgorithms;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
