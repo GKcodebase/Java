@@ -76,8 +76,7 @@ public class DijkstraShortestPath {
                     // src to v through u is smaller than current value of dist[v]
                     if (!visited[v] && graph[u][v] != 0 && dist[u] != Integer.MAX_VALUE && dist[u] + graph[u][v] < dist[v]) {
                         dist[v] = dist[u] + graph[u][v];
-                        System.out.println(u+ " -  " + v + " "+dist[v]);
-
+//                        System.out.println(u+ " -  " + v + " "+dist[v]);
                     }
                 }
 
