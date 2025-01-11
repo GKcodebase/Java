@@ -25,7 +25,7 @@ public class TopologicalSorting {
 
         // Recur for all adjacent vertices
         for (int i : adj.get(v)) {
-            if (!visited[v])
+            if (!visited[i])
                 topologicalSortUtil(i, adj, visited, stack);
         }
         // Push current vertex to stack which stores the
@@ -71,17 +71,18 @@ public class TopologicalSorting {
         int V = 4;
 
         // Edges
-        List<List<Integer>> edges = new ArrayList<>();
+        List<List<Integer> > edges = new ArrayList<>();
         edges.add(Arrays.asList(0, 1));
         edges.add(Arrays.asList(1, 2));
         edges.add(Arrays.asList(3, 1));
         edges.add(Arrays.asList(3, 2));
 
-        //Creating Graph, adjacency list based on edges.
-        List<List<Integer>> adj = new ArrayList<>(V);
+        // Graph represented as an adjacency list
+        List<List<Integer> > adj = new ArrayList<>(V);
         for (int i = 0; i < V; i++) {
             adj.add(new ArrayList<>());
         }
+
         for (List<Integer> i : edges) {
             adj.get(i.get(0)).add(i.get(1));
         }
